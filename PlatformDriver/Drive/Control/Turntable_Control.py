@@ -18,7 +18,7 @@ def Plate_init(filename, check):
         os.system(
             "e: ..\\PlatformDriver\Sandboxie-Plus\SandMan.exe /box:" + filename + " E:\\MECH\Platform_G1\PlatformDriverI\ACTController\ACTControllerCH.exe")
         app.start(
-            r"E:\\MECH\Platform_G1\PlatformDriver\Sandboxie-Plus\SandMan.exe /box:" + filename + " E:\\MECH\Platform_G1\PlatformDriverI\ACTController\ACTControllerCH.exe")
+            r"E:\\MECH\Platform_G1\PlatformDriver\Sandboxie-Plus\SandMan.exe /box:" + filename + " E:\\MECH\Platform_G1\PlatformDriver\ACTController\ACTControllerCH.exe")
         time.sleep(8)
         pid = application.process_from_module(module=Name)
         app.connect(process=pid)

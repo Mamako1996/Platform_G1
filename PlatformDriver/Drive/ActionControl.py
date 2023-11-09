@@ -1,10 +1,12 @@
 import time
+
 from PlatformDriver.Drive.Control.Data_Trans import Data_Trans
 from PlatformDriver.Drive.Control.OCR_Algorithm.Checker_Images import Quick_OCR_Test
 from PlatformDriver.Drive.Control.RM_Control import RM_Control
 from PlatformDriver.Drive.Control.Turntable_Control import Turntable
+
+
 # from PlatformDriver.Drive.Control.OCR_Algorithm.Checker_Images import Quick_OCR_Test
-from PlatformDriver.Drive.GUI.UI_Data import globals
 
 
 def Serial_Ports_tuple_Generate(serial_ports):
