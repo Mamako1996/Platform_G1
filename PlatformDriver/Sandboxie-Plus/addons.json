@@ -1,0 +1,262 @@
+{
+    "date": 1691323631,
+    "list": [
+        {
+            "description": "Microsoft debug helpers for stack trace in trace view",
+            "files-a64": [
+                {
+                    "hash": "f55ef35724b948a169bef46f6cc60715f79b7e478f832684df653f4167d73229",
+                    "path": "dbgcore.dll",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/DbgHelp-a64/dbgcore.dll"
+                },
+                {
+                    "hash": "d5f17035feda8a13ef49a423eea236c2e577ec36701fb659c4d25aba283ae48c",
+                    "path": "dbgeng.dll",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/DbgHelp-a64/dbgeng.dll"
+                },
+                {
+                    "hash": "63d22294afb33d3c12a4d2786c84771f1da642a1cd8373eb7574ec8450ee43c5",
+                    "path": "symsrv.dll",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/DbgHelp-a64/symsrv.dll"
+                }
+            ],
+            "files-a64-sig": "UAPrrF1lZK1ruL4Ce+FTEIXwavPSbisjcQyRXObPZrHdP9/UjoLKrND6Z34SKozCG491vuKo37y3m7tRoA1aAQ==",
+            "files-x64": [
+                {
+                    "hash": "489500b3716a9b3f944b7ef2b90bde8d567cb51df2ac4e25d6afddcc03d82abd",
+                    "path": "dbgcore.dll",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/DbgHelp-x64/dbgcore.dll"
+                },
+                {
+                    "hash": "b70e95c6a86d06a52313457d6c502960f180bffdf5b923a035672cb309175818",
+                    "path": "dbghelp.dll",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/DbgHelp-x64/dbghelp.dll"
+                },
+                {
+                    "hash": "0319d96697d02fc62695e9811a1600a1c63977916e7c438c019ebdf77f4682a5",
+                    "path": "symsrv.dll",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/DbgHelp-x64/symsrv.dll"
+                }
+            ],
+            "files-x64-sig": "qepfRSZe2sx01s7YRd/DFf1CK1/nAdlwkFdBbXrAoSwK6cqI99eXCTGxuCh/X5O+94p7CVyoVBXcomgrYvWp6g==",
+            "files-x86": [
+                {
+                    "hash": "2f058d430a04076e56d460567a70491faff5c5f61cf400b99dfadfc45a6adc4c",
+                    "path": "dbgcore.dll",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/DbgHelp-x86/dbgcore.dll"
+                },
+                {
+                    "hash": "02d05ae44d38199c12a22f3781476ae9e5a5dcd7f8f49d376b61522a88618771",
+                    "path": "dbghelp.dll",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/DbgHelp-x86/dbghelp.dll"
+                },
+                {
+                    "hash": "f50c82614c5c419dc5cf0c83f93d43f0ab5c009c27efac2c1625f0567174ed59",
+                    "path": "symsrv.dll",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/DbgHelp-x86/symsrv.dll"
+                }
+            ],
+            "files-x86-sig": "Y6/VYWb6n8NxGVeR6f+NAz/1MuY4oW4ceM3ljUP32tiCqCdRFAGhV8XsbboRfanqkt9vXWmlvjHni3FnehjnMA==",
+            "icon": "Bug",
+            "id": "DbgHelp",
+            "infoUrl": "https://learn.microsoft.com/en-us/windows/win32/debug/debug-help-library",
+            "installPath": "\\",
+            "maintainer": "Microsoft",
+            "matchArch": "agent",
+            "name": "Debug Helpers",
+            "version": "10.0.22621.755"
+        },
+        {
+            "description": "Image mouner required for encrypted and ramdisk boxes",
+            "files-x64": [
+                {
+                    "hash": "41293dc29e764af642fbb533939c3ebe0b05f97299d4f2ac9a970c183a33c805",
+                    "path": "files.cab",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/ImDiskTk-x64/files.cab"
+                },
+                {
+                    "hash": "0dac8651957bf2ae59797244334e02f49c44b20404986f1b8aa083dae0ac1d10",
+                    "path": "install.bat",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/ImDiskTk-x64/install.bat"
+                }
+            ],
+            "files-x64-sig": "qE+AB7AAbcrlDEWhng2ZD/3mIbLv+1JUiJJkfhr24GmcLwL5VPP7V+BrObnzKGyY16o2tKIUPkoQQ1E7yzLKjw==",
+            "files-x86": [
+                {
+                    "hash": "2fda2b27b81b84d85bb862d164d5d869cc8b419b61de7dd62917769627a4b739",
+                    "path": "files.cab",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/ImDiskTk-x86/files.cab"
+                },
+                {
+                    "hash": "0dac8651957bf2ae59797244334e02f49c44b20404986f1b8aa083dae0ac1d10",
+                    "path": "install.bat",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/ImDiskTk-x86/install.bat"
+                }
+            ],
+            "files-x86-sig": "KGoffGxui1AEYEcB70TTDmovz4UDH1ac1w0SZOjxpEJsDvcfj5AFfndeUQFH+CmkNQd/h3EDfstF3jBOpiFy0Q==",
+            "icon": "RamDisk",
+            "id": "ImDisk",
+            "infoUrl": "https://sourceforge.net/projects/imdisk-toolkit/",
+            "installer": "\\install.bat",
+            "maintainer": "w77/LTRData",
+            "matchArch": "core",
+            "name": "ImDisk Toolkit",
+            "premium": true,
+            "uninstallKey": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\ImDiskApp",
+            "version": "2.0.9.64"
+        },
+        {
+            "description": "Windows API logger for buster sandbox analyzer",
+            "files": [
+                {
+                    "hash": "9b931aff03bafdaf6410a5163aaa03ec0aae4ec56dc8010a738ae114de3231b7",
+                    "path": "logapi32.dll",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/LogApiDLL/logapi32.dll"
+                },
+                {
+                    "hash": "50446fb295b78e249f34a7f466ee609585bbcac80766a7ef6f892c66e5c45af4",
+                    "path": "logapi64.dll",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/LogApiDLL/logapi64.dll"
+                }
+            ],
+            "files-sig": "QIoXASCf/EWM0S8zrtWv0zDy+C4wgrbiQcO6yQmeGXAezBwZFakmxln+NcrJi9qc7ROykG4qIDM6opQ2QOR7xQ==",
+            "icon": "LogAPI",
+            "id": "LogAPI",
+            "infoUrl": "https://bsa.isoftware.nl/",
+            "injectDlls": {
+                "a64": "logapi64a.dll",
+                "x64": "logapi64.dll",
+                "x86": "logapi32.dll"
+            },
+            "installPath": "\\addons\\LogAPI\\",
+            "maintainer": "DavidXanatos",
+            "name": "LogAPI.dll",
+            "version": "1.0.4.9227"
+        },
+        {
+            "description": "Neo Script Tools required to debug box scripts",
+            "files-qt5.15.2_x64": [
+                {
+                    "hash": "57f9a02f3f277e905d8e9ccbe4af3e423943f80e5c8c318d6dc45a23a5b7c599",
+                    "path": "NeoScriptTools.dll",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/NeoScriptTools-qt5.15.2_x64/NeoScriptTools.dll"
+                },
+                {
+                    "hash": "0b58e5e79df13110a8258f14d7b3658d1dd0c8dddc337a164b89d4ac12a0638f",
+                    "path": "Qt5Script.dll",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/NeoScriptTools-qt5.15.2_x64/Qt5Script.dll"
+                },
+                {
+                    "hash": "a340868f45a383b9b23d89e490668127addc5b2c44c799d847cfed69896c992f",
+                    "path": "V4ScriptDebugger.dll",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/NeoScriptTools-qt5.15.2_x64/V4ScriptDebugger.dll"
+                }
+            ],
+            "files-qt5.15.2_x64-sig": "I0+t6GINBYu6GSwiH8cQM4yAPZ7hUSc7HjJzR9D+5uZVaRNUDLG/1s7PAWPUI0Y4w3726bDbg8PeZsg2q9+BJA==",
+            "files-qt5.15.2_x86": [
+                {
+                    "hash": "98fcac87ee8c121926ddf797a4d5aac18512953d0680305e56f5600c78febb94",
+                    "path": "NeoScriptTools.dll",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/NeoScriptTools-qt5.15.2_x86/NeoScriptTools.dll"
+                },
+                {
+                    "hash": "9b3413014a291f6f35cbc683334a59d260991de9268c19a2a90339923395558d",
+                    "path": "Qt5Script.dll",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/NeoScriptTools-qt5.15.2_x86/Qt5Script.dll"
+                },
+                {
+                    "hash": "e688faddf2cf81405d93ca8980af7019a3bec97add6675ec2a2a72879e0ab4cb",
+                    "path": "V4ScriptDebugger.dll",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/NeoScriptTools-qt5.15.2_x86/V4ScriptDebugger.dll"
+                }
+            ],
+            "files-qt5.15.2_x86-sig": "aEgSDJ3SQSvzMyMhVyyORc9vgnMSi/0cGMEam4QYdK/1KHWp5/Oe7PvD7IKDjkx3FW39zANwzfI2uMaNN+xxgQ==",
+            "files-qt6.3.1_x64": [
+                {
+                    "hash": "91ef63e945ec2e2739a52dce98582cb7955255cbd8dd5aafe32120d03f42df0b",
+                    "path": "NeoScriptTools.dll",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/NeoScriptTools-qt6.3.1_x64/NeoScriptTools.dll"
+                },
+                {
+                    "hash": "a46f8d449a97ec0e6b1108b566d2f8504dc9c056680f280c6a51f9897423b1e2",
+                    "path": "V4ScriptDebugger.dll",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/NeoScriptTools-qt6.3.1_x64/V4ScriptDebugger.dll"
+                }
+            ],
+            "files-qt6.3.1_x64-sig": "Ts+GWBUHYTqvrZ3r38KwUMfQv0qTgxuaLhn8OsSWvCRjDGfyGYgId3MWV+8MNRTdHXccLsrUPs5UWZoZGd++Aw==",
+            "files-qt6.3.1d_x64": [
+                {
+                    "hash": "c411282e29a3ba258bd91a0ca0b720651e26ce9005bc655c439db80cb539b5bc",
+                    "path": "NeoScriptTools.dll",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/NeoScriptTools-qt6.3.1d_x64/NeoScriptTools.dll"
+                },
+                {
+                    "hash": "5842106c535ac9887c7958ad76765a8be4ca407fcdae21fd61c329992f899675",
+                    "path": "V4ScriptDebugger.dll",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/NeoScriptTools-qt6.3.1d_x64/V4ScriptDebugger.dll"
+                }
+            ],
+            "files-qt6.3.1d_x64-sig": "nhIPIMrtl9Dl3eApN/vD/q6Vt+hz9XG9XH9qeOuzMvx6p3OkmcqUNhe8yL3NnpiNJ2e8wrLRKvs1uAX/2xtR7w==",
+            "icon": "SourceCode",
+            "id": "V4dbg",
+            "infoUrl": "https://github.com/DavidXanatos/NeoScriptTools",
+            "installPath": "\\",
+            "maintainer": "DavidXanatos",
+            "matchArch": "agent",
+            "name": "Script Debugger",
+            "version": "1.2"
+        },
+        {
+            "description": "An optional dll to hide sbiedll.dll",
+            "files": [
+                {
+                    "hash": "4bcb7f5ac906f6f0fa9d91a24a4ed616ae051dbbc12adbf330f782559156cb2d",
+                    "path": "SbieHide.x64.dll",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/SbieHide/SbieHide.x64.dll"
+                },
+                {
+                    "hash": "a32559520fa0f3ce280678f0f51b4ec2c99087c61562275327e8bc9eefcf9e9e",
+                    "path": "SbieHide.x86.dll",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/SbieHide/SbieHide.x86.dll"
+                }
+            ],
+            "files-sig": "qdr6DmKv3oolMMlZvOqGkYLAnkc/pUVXVcm8RllqQ71ju7V1HGYiGFcK3OKaS1zDgO8NTAveVNQi43VddCH4NA==",
+            "icon": "Anon",
+            "id": "SbieHide",
+            "infoUrl": "https://github.com/VeroFess/SbieHide",
+            "injectDlls": {
+                "a64": "SbieHide.a64.dll",
+                "x64": "SbieHide.x64.dll",
+                "x86": "SbieHide.x86.dll"
+            },
+            "installPath": "\\addons\\SbieHide\\",
+            "maintainer": "VeroFess",
+            "name": "SbieHide.dll",
+            "version": "1.0"
+        },
+        {
+            "description": "sigcheck.exe and requried script to check files in virus total",
+            "files": [
+                {
+                    "hash": "1efdc503f8f6d9d2285557ee8d4ad3e24e202a78a4f2fcec1f347eb07af200a8",
+                    "path": "CheckFile.ps1",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/Sigcheck/CheckFile.ps1"
+                },
+                {
+                    "hash": "4fe9a2bd4b160a5352333d00d0b0c10f13685af7acdb48e9e9d0c3877a19eed4",
+                    "path": "sigcheck.exe",
+                    "url": "https://sandboxie-plus.com/update/sandboxie-addons/Sigcheck/sigcheck.exe"
+                }
+            ],
+            "files-sig": "KLEIFntd0flA8SxfNWKzxgJZxGT/aIYSyQTKjobpu2vu8CpTdbIb5w9vuvdTcMea1Y089YESbdB3oQ6RrKBhVg==",
+            "icon": "AntiVir",
+            "id": "FileChecker",
+            "infoUrl": "https://learn.microsoft.com/en-us/sysinternals/downloads/sigcheck",
+            "installPath": "\\addons\\FileChecker\\",
+            "maintainer": "DX/Sysinternals",
+            "name": "File Checker",
+            "version": "1.0"
+        }
+    ],
+    "version": 1
+}
