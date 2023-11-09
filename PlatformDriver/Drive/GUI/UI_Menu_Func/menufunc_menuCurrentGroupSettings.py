@@ -3,6 +3,7 @@ from PyQt5.QtWidgets import *
 from PlatformDriver.Drive.GUI.UI_Data import globals
 from PlatformDriver.Drive.GUI.UI_Window_Func import windowfunc_Working_List
 
+
 def menuCurrentGroupSettings():
     from PlatformDriver.Drive.MainControl import group_all
 

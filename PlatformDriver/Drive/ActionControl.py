@@ -30,7 +30,7 @@ def DS_Process_Start(sd, COM):
             stop = Data_Trans(1, 9600, *temp_list, **COM).data_sending()
 
             if not stop:
-                print("error occured!!!")
+                print("error occurred!!!")
                 return done
             else:
                 count = count + 1
@@ -46,7 +46,7 @@ def DS_Process_Start(sd, COM):
     else:
         stop = Data_Trans(1, 9600, *sd, **COM).data_sending()
         if not stop:
-            print("error occured!!!")
+            print("error occurred!!!")
             return done
         else:
             count = count + 1
@@ -81,7 +81,7 @@ def Dispensing(data, Ports):
             nextStep = turntable_One_Step_Movement_b(disp_finished)
             time.sleep(1)
         if not nextStep:
-            print("truntable error occur")
+            print("turntable error occur")
             break
     time.sleep(2)
     turntable_Home_Position_Movement(len(data), True)
@@ -202,21 +202,21 @@ def turntable_Home_Position_Movement(rel_position, movement):
 #     Dts = disp_data_00
 #     Sts = stir_data_total
 #
-#     lenth = len(Dts)
+#     length = len(Dts)
 #     Disp_finished = Dispensing(Dts, dispensing_ports)
 #     if Disp_finished:
 #         print("Dispensing finish")
 #         stir_finished = Synthesise(Sts, stirring_ports)
 #         if stir_finished:
 #             print("Stirring finish")
-#             char_finished = SC_Process_Start(lenth, RM_port)
+#             char_finished = SC_Process_Start(length, RM_port)
 #             time.sleep(2)
 #             if char_finished:
 #                 print("Coating finish")
-#                 dc_finished = CD_Process_Start(lenth, RM_port)
+#                 dc_finished = CD_Process_Start(length, RM_port)
 #                 if dc_finished:
 #                     print("Data Collection finish")
-#                     All_finished = Quick_OCR_Test(lenth).Test_beign()
+#                     All_finished = Quick_OCR_Test(length).Test_beign()
 #                     if All_finished:
 #                         print("Experiment Finished!!!")
 
@@ -268,7 +268,7 @@ def Demo():
     Dts = disp_data_00
     Sts = stir_data_total
 
-    lenth = len(Dts)
+    length = len(Dts)
     Disp_finished = Dispensing(Dts, dispensing_ports)
 
     if Disp_finished:
@@ -276,24 +276,24 @@ def Demo():
         stir_finished = Synthesise(Sts, stirring_ports)
         if stir_finished:
             print("Stirring finish")
-            char_finished = SC_Process_Start(lenth, RM_port)
+            char_finished = SC_Process_Start(length, RM_port)
             time.sleep(2)
             if char_finished:
                 print("Coating finish")
-                dc_finished = CD_Process_Start(lenth, RM_port)
+                dc_finished = CD_Process_Start(length, RM_port)
                 if dc_finished:
                     print("Data Collection finish")
-                    All_finished = Quick_OCR_Test(lenth).Test_beign()
+                    All_finished = Quick_OCR_Test(length).Test_beign()
                     if All_finished:
                         TB.turntable_Windows_Close()
                     print("Experiment Finished!!!")
 
 
-# # lenth = 3
+# # length = 3
 # dc_finished = CD_Process_Start(1, RM_port)
 # # if dc_finished:
 # #     print("Data Collection finish")
-# #     All_finished = Quick_OCR_Test(lenth).Test_beign()
+# #     All_finished = Quick_OCR_Test(length).Test_beign()
 # #     if All_finished:
 # #         print("Experiment Finished!!!")
 

@@ -32,7 +32,7 @@ def Plate_init(filename, check):
 
 class Turntable:
     def __init__(self):
-        self.b, self.g = self.Truntable_Init('ACTControllerCH.exe')
+        self.b, self.g = self.Turntable_Init('ACTControllerCH.exe')
 
     def turntable_One_Step_Movement_b(self):
         app = application.Application(backend="uia")
@@ -77,7 +77,7 @@ class Turntable:
         appg['Dialog'].child_window(title="确定", control_type="Button", top_level_only=False).click()
 
     @staticmethod
-    def Truntable_Init(name):
+    def Turntable_Init(name):
         count = 0
         bottles = 0
         glasses = 0

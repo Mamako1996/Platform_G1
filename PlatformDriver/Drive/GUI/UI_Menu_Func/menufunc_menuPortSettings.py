@@ -5,6 +5,7 @@ import os
 
 from PlatformDriver.Drive.GUI.UI_Data import globals
 
+
 def menuPortSettings():
     from PlatformDriver.Drive.MainControl import MyWindow
     from PlatformDriver.Drive.GUI.UITest import Ui_MainWindow
@@ -18,7 +19,7 @@ def menuPortSettings():
         filename = 'E:/MECH/Platform_G1/PlatformDriver/Drive/GUI/UI_Data/PortConfig.txt'
         if os.path.exists(filename):
             print("Import existing port config.")
-            with open(filename,'r') as f:
+            with open(filename, 'r') as f:
                 lines = f.readlines()[:4]
                 lines = [line.strip() for line in lines]
             globals.selected_port = lines
@@ -169,7 +170,7 @@ def menuPortSettings():
             globals.port_baud_rate[3] = combobox_Baud_4.currentText()
             print("Serial Port Settings:", globals.selected_port)
             print("Serial Port Baud Rate:", globals.port_baud_rate)
-            #my_control.serialPortSetting()
+            # my_control.serialPortSetting()
 
             # save Serial Port Settings into .txt
             with open('E:/MECH/Platform_G1/PlatformDriver/Drive/GUI/UI_Data/PortConfig.txt', 'w') as f:

@@ -68,9 +68,9 @@ class Data_Trans:
 
             if jumper == len(self.Group):
                 print("Data upload successfully!")
-                trun = len(self.Group)
+                turn = len(self.Group)
                 check = 0
-                for times in range(trun):
+                for times in range(turn):
                     while True:
                         receiver[times] = serialDict[serials[times]].readline().decode()
                         if "finished" in receiver[times]:
@@ -78,7 +78,7 @@ class Data_Trans:
                             success = True
                             check = check + 1
                             break
-                if check == trun:
+                if check == turn:
                     return success
                 else:
                     print("failure")
