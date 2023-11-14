@@ -22,12 +22,12 @@ class Quick_OCR_Test:
         done = False
 
         # Tesseract-OCR path
-        pytesseract.pytesseract.tesseract_cmd = pytesseract.pytesseract.tesseract_cmd = r"E:\MECH\Platform_G1\PlatformDriver\Drive\Control\OCR_Algorithm\Tesseract-OCR\tesseract.exe"
+        pytesseract.pytesseract.tesseract_cmd = pytesseract.pytesseract.tesseract_cmd = r"Tesseract-OCR\tesseract.exe"
         index = 0
         for i in range(1, self.num + 1):
             index = index + 1
             # Image open
-            img = cv2.imread('Control/OCR_Algorithm/IMGS/Test' + str(i) + '.jpg')
+            img = cv2.imread('IMGS/Test' + str(i) + '.jpg')
             img = img[80:610, 250:470]
 
             # Resizing for scan
@@ -98,6 +98,6 @@ class Quick_OCR_Test:
             print(a)
             sheet.append(a)
             print("time consuming : {:.2f}s".format(end - start))
-            wb.save('Control/OCR_Algorithm/Result/Testing.xlsx')
+            wb.save('Result/Testing.xlsx')
             done = True
         return done

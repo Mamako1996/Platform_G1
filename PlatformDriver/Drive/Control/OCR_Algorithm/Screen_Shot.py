@@ -22,7 +22,7 @@ class Screen_Shot:
                 time.sleep(1)
                 cv2.waitKey(1) & 0xFF
                 if n == 1:
-                    cv2.imwrite("OCR_Algorithm/IMGS/Test" + str(self.index) + ".jpg", frame)
+                    cv2.imwrite("IMGS/Test" + str(self.index) + ".jpg", frame)
                 n = n + 1
             print("save Test" + str(self.index) + ".jpg successfully!")
 

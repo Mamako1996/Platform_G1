@@ -1,14 +1,17 @@
 import os
 import time
+import psutil
 from pywinauto import application
 from pywinauto.application import ProcessNotFoundError
-import psutil
+from PlatformDriver.Searching_root import Searching_root
 
 
 def Plate_init(filename, check):
     pid = 0
     Name = 'ACTControllerCH'
     app = application.Application(backend="uia")
+    root_path = Searching_root().print_root()
+    ACT_path = " " + root_path + "\Platform_G1\PlatformDriver\ACTController\ACTControllerCH.exe"
     try:
         if check == 0:
             pid = application.process_from_module(module=Name)
@@ -16,9 +19,9 @@ def Plate_init(filename, check):
             raise ProcessNotFoundError
     except ProcessNotFoundError:
         os.system(
-            "e: ..\\PlatformDriver\Sandboxie-Plus\SandMan.exe /box:" + filename + " E:\\MECH\Platform_G1\PlatformDriverI\ACTController\ACTControllerCH.exe")
+            "e: ..\PlatformDriver\Sandboxie-Plus\SandMan.exe /box:" + filename + ACT_path)
         app.start(
-            r"E:\\MECH\Platform_G1\PlatformDriver\Sandboxie-Plus\SandMan.exe /box:" + filename + " E:\\MECH\Platform_G1\PlatformDriver\ACTController\ACTControllerCH.exe")
+            r"" + root_path + "\Platform_G1\PlatformDriver\Sandboxie-Plus\SandMan.exe /box:" + filename + ACT_path)
         time.sleep(8)
         pid = application.process_from_module(module=Name)
         app.connect(process=pid)

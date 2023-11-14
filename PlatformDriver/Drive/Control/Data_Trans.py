@@ -84,7 +84,7 @@ class Data_Trans:
                     print("failure")
                     return False
             else:
-                print("Data upload ERROR occour!")
+                print("Data upload ERROR occur!")
         return success
 
     def getGroup(self):
