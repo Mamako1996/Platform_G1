@@ -106,3 +106,7 @@ class Turntable:
                 glasses = Plate_init("Plate_with_glasses", 1)
 
         return bottles, glasses
+
+
+if __name__ == "__main__":
+    Turntable()

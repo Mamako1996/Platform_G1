@@ -15,3 +15,6 @@ class Searching_root:
     def print_root(self):
         return self.name
 
+
+if __name__ == "__main__":
+    print(Searching_root().print_root())

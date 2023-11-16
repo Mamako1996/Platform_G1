@@ -1,10 +1,12 @@
 import time
-from Control.Data_Trans import Data_Trans
-from Control.OCR_Algorithm.Checker_Images import Quick_OCR_Test
-from Control.RM_Control import RM_Control
-from Control.Turntable_Control import Turntable
+from PlatformDriver.Drive.Control.Data_Trans import Data_Trans
+from PlatformDriver.Drive.Control.OCR_Algorithm.Checker_Images import Quick_OCR_Test
+from PlatformDriver.Drive.Control.RM_Control import RM_Control
+from PlatformDriver.Drive.Control.Turntable_Control import Turntable
 # from PlatformDriver.Drive.Control.OCR_Algorithm.Checker_Images import Quick_OCR_Test
 from PlatformDriver.Drive.GUI.UI_Data import globals
+
+TB = Turntable()
 
 
 def Serial_Ports_tuple_Generate(serial_ports):
@@ -91,7 +93,7 @@ def SC_Process_Start(num, RM_Port):
     SC_finish = False
     for times in range(3):
         turntable_One_Step_Movement_b(True)
-        time.sleep(2)
+        time.sleep(1)
     control = RM_Control(RM_Port)
     for sets in range(num):
         finished = control.robo_arm_process(action, 0)
@@ -120,8 +122,16 @@ def CD_Process_Start(num, RM_Port):
         if finished:
             if sets == num - 1:
                 control.robo_arm_finish()
+                CD_finish = True
                 break
             CD_finish = turntable_One_Step_Movement_g(True)
+            if CD_finish:
+                CD_finish = False
+                continue
+            else:
+                turntable_One_Step_Movement_g(True)
+                print("An error occur in ArmControl.py")
+            time.sleep(2)
         else:
             print("An error occur in ArmControl.py")
             break
@@ -220,7 +230,7 @@ def turntable_Home_Position_Movement(rel_position, movement):
 
 
 # Test:
-def Demo():
+def Demo(number):
     RM_port = "COM5"
     stirring_ports = ["COM6", "COM8", "COM7"]
     dispensing_ports = ["COM13"]
@@ -257,44 +267,52 @@ def Demo():
     stir_data_01 = [stir_data_demo]
     stir_data_02 = [stir_data_demo]
     stir_data_03 = [stir_data_demo]
-    disp_data_00 = [disp_data_1, disp_data_2]
 
     stir_data_total = [stir_data_01, stir_data_01, stir_data_01]
     disp_data_total = [disp_data_1, disp_data_2, disp_data_3, disp_data_4, disp_data_5, disp_data_6, disp_data_7,
                        disp_data_8, disp_data_9, disp_data_10, disp_data_11, disp_data_12]
 
+    disp_data_00 = disp_data_total[:number]
+
     Dts = disp_data_00
     Sts = stir_data_total
 
-    length = len(Dts)
-    Disp_finished = Dispensing(Dts, dispensing_ports)
+    # # ALL
+    # length = len(Dts)
+    # Disp_finished = Dispensing(Dts, dispensing_ports)
+    #
+    # if Disp_finished:
+    #     print("Dispensing finish")
+    #     stir_finished = Synthesise(Sts, stirring_ports)
+    #     if stir_finished:
+    #         print("Stirring finish")
+    #         char_finished = SC_Process_Start(length, RM_port)
+    #         time.sleep(2)
+    #         if char_finished:
+    #             print("Coating finish")
+    #             dc_finished = CD_Process_Start(length, RM_port)
+    #             if dc_finished:
+    #                 print("Data Collection finish")
+    #                 All_finished = Quick_OCR_Test(length).Test_beign()
+    #                 if All_finished:
+    #                     TB.turntable_Windows_Close()
+    #                 print("Experiment Finished!!!")
 
-    if Disp_finished:
-        print("Dispensing finish")
-        stir_finished = Synthesise(Sts, stirring_ports)
-        if stir_finished:
-            print("Stirring finish")
-            char_finished = SC_Process_Start(length, RM_port)
-            time.sleep(2)
-            if char_finished:
-                print("Coating finish")
-                dc_finished = CD_Process_Start(length, RM_port)
-                if dc_finished:
-                    print("Data Collection finish")
-                    All_finished = Quick_OCR_Test(length).Test_beign()
-                    if All_finished:
-                        TB.turntable_Windows_Close()
-                    print("Experiment Finished!!!")
+    # Section Test
+    length = number
+    dc_finished = CD_Process_Start(length, RM_port)
+    if dc_finished:
+        print("Data Collection finish")
+        All_finished = Quick_OCR_Test(length).Test_beign()
+        if All_finished:
+            print("Experiment Finished!!!")
 
 
-# # length = 3
-# dc_finished = CD_Process_Start(1, RM_port)
-# # if dc_finished:
-# #     print("Data Collection finish")
-# #     All_finished = Quick_OCR_Test(length).Test_beign()
-# #     if All_finished:
-# #         print("Experiment Finished!!!")
+class Demo_test:
+    def __init__(self, number):
+        self.number = number
+        Demo(self.number)
+
 
 if __name__ == "__main__":
-    TB = Turntable()
-    # Demo()
+    Demo_test(12)

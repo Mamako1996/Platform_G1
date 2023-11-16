@@ -1,7 +1,10 @@
+import warnings
+
 import pandas as pd
 import time
 import serial
 from PlatformDriver.Drive.Control.OCR_Algorithm.Screen_Shot import Screen_Shot
+from PlatformDriver.Searching_root import Searching_root
 
 
 class RM_Control:
@@ -32,10 +35,13 @@ class LeArm_Control:
         time.sleep(5)
 
     def read_csv(self, action):
+        root = Searching_root().print_root()
         if action == 'b':
-            self.df = pd.read_csv('Control/RM_Motion_files/Bottles.csv', sep=';')
+            self.df = pd.read_csv(root + '/Platform_G1/PlatformDriver/Drive/Control/RM_Motion_files/Bottles.csv',
+                                  sep=';')
         if action == 'g':
-            self.df = pd.read_csv('Control/RM_Motion_files/Glasses.csv', sep=';')
+            self.df = pd.read_csv(root + '/Platform_G1/PlatformDriver/Drive/Control/RM_Motion_files/Glasses.csv',
+                                  sep=';')
         print('CSV Read successfully')
         print(self.df)
 
@@ -74,6 +80,7 @@ class LeArm_Control:
                     motor_list = []
                     count = 0
                     for j in range(1, 7):
+                        warnings.filterwarnings('ignore', message='.*Series.__getitem__.*')
                         ang = row[j]
                         if not pd.isna(ang):
                             h_ang = self.dec_2_hex(int(ang))
@@ -103,6 +110,10 @@ class LeArm_Control:
 
     def end(self):
         self.port.close()
+
+
+if __name__ == "__main__":
+    RM_Control("COM5").robo_arm_process("g", 0)
 
 # def start_ocr(self):
 #     done = False

@@ -1,6 +1,8 @@
 import cv2
 import time
 
+from PlatformDriver.Searching_root import Searching_root
+
 
 class Screen_Shot:
     def __init__(self, index):
@@ -22,7 +24,8 @@ class Screen_Shot:
                 time.sleep(1)
                 cv2.waitKey(1) & 0xFF
                 if n == 1:
-                    cv2.imwrite("IMGS/Test" + str(self.index) + ".jpg", frame)
+                    root = Searching_root().print_root()
+                    cv2.imwrite(root + "/Platform_G1/PlatformDriver/Drive/Control/OCR_Algorithm/IMGS/Test" + str(self.index) + ".jpg", frame)
                 n = n + 1
             print("save Test" + str(self.index) + ".jpg successfully!")
 
@@ -30,3 +33,8 @@ class Screen_Shot:
 
     def release(self):
         self.cap.release()
+
+
+if __name__ == "__main__":
+    print(1)
+    Screen_Shot(1).shot()
